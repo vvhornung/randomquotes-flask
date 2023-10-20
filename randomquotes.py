@@ -14,10 +14,11 @@ phrases = [
     "Alone or not you gonna walk forward.",
 ]
 
-# Original route
 @app.route('/')
 def get_random_quote():
-    return jsonify(random.choice(phrases))
+    phrase = random.choice(phrases)
+    container_id = os.uname()[1] 
+    return f"{phrase} - Container Id: {container_id}"
 
 
 if __name__ == '__main__':
