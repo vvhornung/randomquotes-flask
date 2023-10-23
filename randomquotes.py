@@ -14,10 +14,6 @@ phrases = [
     "Alone or not you gonna walk forward.",
 ]
 
-# Original route
-# @app.route('/')
-# def get_random_quote():
-#     return jsonify(random.choice(phrases))
 
 @app.route('/')
 def get_random_quote():
